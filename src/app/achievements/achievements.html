@@ -1,0 +1,58 @@
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="text-h2">Achievements & Recognition</h2>
+          <p class="section-subtitle">
+            Milestones and accomplishments that reflect my dedication to excellence
+          </p>
+        </div>
+        
+        <div class="achievements-content">
+          <div class="achievements-grid">
+            <div class="achievement-card card" *ngFor="let achievement of achievements">
+              <div class="achievement-icon">{{ achievement.icon }}</div>
+              <div class="achievement-content">
+                <h3 class="text-h4">{{ achievement.title }}</h3>
+                <p>{{ achievement.description }}</p>
+                <div class="achievement-meta" *ngIf="achievement.meta">
+                  <span>{{ achievement.meta }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="certifications-section">
+            <h3 class="text-h3">Certifications</h3>
+            <div class="certifications-grid">
+              <div class="certification-card card" *ngFor="let cert of certifications">
+                <div class="cert-header">
+                  <h4 class="text-h4">{{ cert.name }}</h4>
+                  <div class="cert-provider">{{ cert.provider }}</div>
+                </div>
+                <p class="cert-description">{{ cert.description }}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="positions-section">
+            <h3 class="text-h3">Leadership & Responsibilities</h3>
+            <div class="positions-grid">
+              <div class="position-card card" *ngFor="let position of positions">
+                <div class="position-header">
+                  <div>
+                    <h4 class="text-h4">{{ position.role }}</h4>
+                    <p class="position-org">{{ position.organization }}</p>
+                  </div>
+                  <div class="position-period">{{ position.period }}</div>
+                </div>
+                <ul class="position-responsibilities">
+                  <li *ngFor="let responsibility of position.responsibilities">
+                    {{ responsibility }}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

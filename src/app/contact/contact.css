@@ -1,0 +1,206 @@
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-16);
+    }
+    
+    .section-subtitle {
+      color: var(--neutral-600);
+      max-width: 600px;
+      margin: var(--space-4) auto 0;
+      font-size: 1.1rem;
+    }
+    
+    .contact-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-16);
+      align-items: start;
+    }
+    
+    .contact-info h3 {
+      color: var(--neutral-900);
+      margin-bottom: var(--space-6);
+    }
+    
+    .contact-description {
+      color: var(--neutral-600);
+      line-height: var(--line-height-loose);
+      margin-bottom: var(--space-10);
+      font-size: 1.05rem;
+    }
+    
+    .contact-methods {
+      margin-bottom: var(--space-10);
+    }
+    
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-6);
+      padding: var(--space-4);
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .contact-method:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .method-icon {
+      font-size: 2rem;
+      min-width: 50px;
+      text-align: center;
+    }
+    
+    .method-info h4 {
+      color: var(--neutral-900);
+      margin-bottom: var(--space-1);
+      font-size: 1rem;
+    }
+    
+    .method-info a {
+      color: var(--primary-600);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .method-info a:hover {
+      color: var(--primary-700);
+    }
+    
+    .method-info span {
+      color: var(--neutral-600);
+    }
+    
+    .social-links h4 {
+      color: var(--neutral-900);
+      margin-bottom: var(--space-4);
+    }
+    
+    .social-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-3);
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-4);
+      background: white;
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--neutral-600);
+      font-weight: 500;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .social-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      color: var(--primary-600);
+    }
+    
+    .social-icon {
+      font-size: 1.25rem;
+    }
+    
+    .cta-card {
+      padding: var(--space-10);
+      text-align: center;
+      background: linear-gradient(135deg, var(--primary-50), var(--secondary-50));
+    }
+    
+    .cta-card h3 {
+      color: var(--neutral-900);
+      margin-bottom: var(--space-4);
+    }
+    
+    .cta-card p {
+      color: var(--neutral-600);
+      line-height: var(--line-height-loose);
+      margin-bottom: var(--space-8);
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .availability-status {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+      color: var(--success-600);
+      font-weight: 500;
+    }
+    
+    .status-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--success-500);
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(16, 185, 129, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+      }
+    }
+    
+    .cta-actions {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      margin-bottom: var(--space-6);
+    }
+    
+    .response-time {
+      color: var(--neutral-500);
+      font-size: 0.9rem;
+    }
+    
+    .response-time p {
+      margin: 0;
+      opacity: 0.8;
+    }
+    
+    @media (max-width: 1024px) {
+      .contact-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .social-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-actions {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .btn {
+        width: 200px;
+      }
+      
+      .cta-card {
+        padding: var(--space-8);
+      }
+    }
